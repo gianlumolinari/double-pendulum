@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.idea/
+.vscode/
+.DS_Store
+# Fortran build products
+fortran/dp
+fortran/double_pendulum
+double_pendulum_output.csv
+*.o
+*.mod
