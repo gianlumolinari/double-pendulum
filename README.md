@@ -4,7 +4,7 @@ Simulation of a planar double pendulum, written as an exercise for learning
 Python (NumPy, SciPy, Matplotlib). The equations of motion were derived by
 hand from the Lagrangian of two point masses on massless rods. The same
 model was also written in Fortran with a fixed-step RK4 integrator, and the
-two implementations are compared. The code was written with AI assistance.
+two implementations are compared.
 
 <p align="center">
   <img src="figures/pendulum.gif" width="300" alt="Double pendulum animation">
