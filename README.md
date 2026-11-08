@@ -14,6 +14,8 @@ two implementations are compared.
 *Right: two pendulums whose initial angle θ₁ differs by 0.001°. They move
 together for several seconds and then separate completely.*
 
+![θ₁ for the two releases](figures/angles.png)
+
 ## Model
 
 State y = (θ₁, ω₁, θ₂, ω₂), with angles from the downward vertical and Δ = θ₂ − θ₁:

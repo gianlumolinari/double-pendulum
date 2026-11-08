@@ -96,9 +96,25 @@ def fortran_comparison():
     plt.close(fig)
 
 
+def angle_plot():
+    """theta1(t) for two pendulums released 0.001 deg apart."""
+    t_f = 20.0
+    a = simulate(Y0, t_f, P, n_out=4001)
+    b = simulate(Y0 + [np.radians(0.001), 0, 0, 0], t_f, P, n_out=4001)
+    fig, ax = plt.subplots(figsize=(8, 3.6), dpi=130)
+    ax.plot(a.t, np.degrees(a.y[0]), color=BLUE, lw=1.5, label="θ₁(0) = 120°")
+    ax.plot(b.t, np.degrees(b.y[0]), color=ORANGE, lw=1.5, ls="--", label="θ₁(0) = 120.001°")
+    ax.set(xlabel="time [s]", ylabel="θ₁ [deg]", title="Two releases 0.001° apart")
+    ax.legend(frameon=False, loc="upper left")
+    fig.tight_layout()
+    fig.savefig(FIG / "angles.png")
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     FIG.mkdir(exist_ok=True)
     trajectory_plot()
+    angle_plot()
     fortran_comparison()
     one = simulate(Y0, 12.0, P, n_out=301)
     animate([one], [BLUE], "", FIG / "pendulum.gif")
